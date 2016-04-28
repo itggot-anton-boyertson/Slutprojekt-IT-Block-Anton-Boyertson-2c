@@ -1,22 +1,27 @@
 class App < Sinatra::Base
   enable :sessions
 
-  before do
-    @user = User.get(session[:user]) if session[:user]
-    unless @user
-      redirect '/login'
-    end
+  get '/' do
+    erb :index
   end
 
+  post '/login' do
+    p params
+    redirect '/'
+  end
 
-  get '/grillkorv' do
-    if @user
-      erb :userloggedin
-    else
-      erb :slökdjfds
-    end
+  get '/register' do
+    erb :register
+  end
 
-    erb :index
+  post '/user/create' do
+    #user = User.create(first_name: params['first_name'],
+    #                  last_name: params['last_name'],
+    #                 username: params['username'],
+    #                password: params['password'],
+    #               mobil: params['mobil'],
+    #              e_mail_adress: params['e_mail_adress'])
+    redirect '/'
   end
 
 

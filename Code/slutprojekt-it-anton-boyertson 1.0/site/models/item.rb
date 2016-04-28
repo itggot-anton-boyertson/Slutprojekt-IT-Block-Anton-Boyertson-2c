@@ -1,8 +1,8 @@
 class Item
   include DataMapper::Resource
 
-  property :id, Serial
-  property :item_name, String, required: true
+  property :user_id, Serial
+  property :list_is, Serial
 
   belongs_to :list
 end

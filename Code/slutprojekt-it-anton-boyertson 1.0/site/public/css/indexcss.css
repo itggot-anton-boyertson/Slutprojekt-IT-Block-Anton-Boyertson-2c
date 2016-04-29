@@ -1,0 +1,22 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: brown;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+}
+
+.headerlist {
+    float: left;
+    margin-right: 20px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.headeritem {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}

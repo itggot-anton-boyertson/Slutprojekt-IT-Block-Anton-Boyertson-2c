@@ -15,14 +15,19 @@ class App < Sinatra::Base
   end
 
   post '/user/create' do
-    #user = User.create(first_name: params['first_name'],
-    #                  last_name: params['last_name'],
-    #                 username: params['username'],
-    #                password: params['password'],
-    #               mobil: params['mobil'],
-    #              e_mail_adress: params['e_mail_adress'])
-    redirect '/'
+    user = User.create(first_name: params['first_name'],
+                       last_name: params['last_name'],
+                       username: params['username'],
+                       password: params['password'],
+                       mobil: params['mobil'],
+                       e_mail_address: params['e_mail_address'])
+    if user.valid?
+      redirect '/'
+    else
+      redirect '/register'
+    end
   end
+
 
 
 end

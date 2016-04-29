@@ -7,9 +7,9 @@ class Seeder
   end
 
   def self.user
-    User.create(first_name: "Anton", lastname: "Eriksson", username: "anteri", mobil: "0468200000", password: "baconclub", e_mail_adress: "antoneriksson@gmail.com")
-    User.create(first_name: "Pontus", lastname: "Boyertson", username: "ponboy", mobil: "0595033344", password: "baconburger", e_mail_adress: "pontusboyertson@gmail.com")
-    User.create(first_name: "Martin", lastname: "Davidsson", username: "mardav", mobil: "0760550505", password: "baconfish", e_mail_adress: "martindavidsson@gmail.com")
+    User.create(first_name: "Anton", last_name: "Eriksson", username: "anteri", mobil: "0468200000", password: "baconclub", e_mail_address: "antoneriksson@gmail.com")
+    User.create(first_name: "Pontus", last_name: "Boyertson", username: "ponboy", mobil: "0595033344", password: "baconburger", e_mail_address: "pontusboyertson@gmail.com")
+    User.create(first_name: "Martin", last_name: "Davidsson", username: "mardav", mobil: "0760550505", password: "baconfish", e_mail_address: "martindavidsson@gmail.com")
   end
 
   def self.list

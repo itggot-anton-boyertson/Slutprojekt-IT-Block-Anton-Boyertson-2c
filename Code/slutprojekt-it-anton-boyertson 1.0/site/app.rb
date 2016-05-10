@@ -2,12 +2,30 @@ class App < Sinatra::Base
   enable :sessions
 
   get '/' do
-    erb :index
+    if session[:user_id]
+      erb :homepage
+    else
+      erb :index
+    end
+  end
+
+  get '/index.erb' do
+    redirect '/'
+  end
+
+  post '/logout' do
+    session[:user_id] = nil
+    redirect '/'
   end
 
   post '/login' do
-    p params
-    redirect '/'
+    user = User.first(username: params['username'])
+    if user && user.password == params['password']
+      session[:user_id] = user.id
+      redirect '/'
+    else
+      redirect '/register'
+    end
   end
 
   get '/register' do
@@ -28,6 +46,16 @@ class App < Sinatra::Base
     end
   end
 
+  get '/contacts.erb' do
+    redirect '/contacts'
+  end
 
+  get '/contacts' do
+    erb :contacts
+  end
+
+  get '/settings.erb' do
+    erb :settings
+  end
 
 end

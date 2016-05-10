@@ -59,7 +59,10 @@ class App < Sinatra::Base
   end
 
   get '/settings.erb' do
-    erb :settings
+    redirect '/settings'
   end
 
+  get '/setting' do
+    erb :settings
+  end
 end

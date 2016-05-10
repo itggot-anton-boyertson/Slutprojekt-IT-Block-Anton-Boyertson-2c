@@ -69,3 +69,9 @@ input[type=submit]:hover {
     width: 220px;
     height: 80px;
 }
+
+#logo {
+    width: 180px;
+    height: 140px;
+    margin-top: -20px;
+}

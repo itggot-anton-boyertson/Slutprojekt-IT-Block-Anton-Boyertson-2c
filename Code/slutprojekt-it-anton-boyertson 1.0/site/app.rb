@@ -51,7 +51,11 @@ class App < Sinatra::Base
   end
 
   get '/contacts' do
-    erb :contacts
+    if session[:user_id]
+      erb :contacts_private
+    else
+      erb :contacts
+    end
   end
 
   get '/settings.erb' do

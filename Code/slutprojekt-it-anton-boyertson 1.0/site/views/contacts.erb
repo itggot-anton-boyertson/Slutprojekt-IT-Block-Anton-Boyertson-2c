@@ -13,24 +13,28 @@
 <div id="container">
   <header id="header">
     <nav>
-      <ul>
-        <li class="headerlist"><a class="headeritem" href="index.erb"><h4>Home</h4></a></li>
-        <li class="headerlist"><a class="headeritemon" href="contacts.erb"><h4>Contacts</h4></a></li>
-        <li class="headerlist"><a class="headeritem">
-          <form method="post" action="/login">
-            <ul>
-              <li class="headerlist"><div id="login"><input type="text" name="username" placeholder="Username">
-                <input type="password" name="password" placeholder="Password"></div></li>
-              <li class="headerlist"><input type="submit" value="Login"></li>
-            </ul>
-          </form></a></li>
-        <li class="headerlist"><a class="headeritem">
-          <form method="get" action="/register">
-            <input type="submit" value="Register">
-          </form></a></li>
-      </ul>
+      <a href="/">Home</a>
+      <a href="/contacts">Contacts</a>
+      <img  src="/img/logo.png">
+      <div id="login">
+        <form action="/login" method="post">
+          <div class="inputs">
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+          </div>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+      <div>
+        <form action="/register" method="get">
+          <button type="submit"  id="register">Register</button>
+        </form>
+      </div>
     </nav>
   </header>
 </div>
 </body>
 </html>
+
+
+

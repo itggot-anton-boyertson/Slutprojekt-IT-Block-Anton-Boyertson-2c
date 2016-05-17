@@ -9,10 +9,6 @@ class App < Sinatra::Base
     end
   end
 
-  get '/index.erb' do
-    redirect '/'
-  end
-
   post '/logout' do
     session[:user_id] = nil
     redirect '/'
@@ -46,10 +42,6 @@ class App < Sinatra::Base
     end
   end
 
-  get '/contacts.erb' do
-    redirect '/contacts'
-  end
-
   get '/contacts' do
     if session[:user_id]
       erb :contacts_private
@@ -58,11 +50,7 @@ class App < Sinatra::Base
     end
   end
 
-  get '/settings.erb' do
-    redirect '/settings'
-  end
-
-  get '/setting' do
-    erb :settings
+  get '/settings' do
+    "Hello World"
   end
 end

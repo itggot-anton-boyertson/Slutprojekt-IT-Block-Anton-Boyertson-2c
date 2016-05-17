@@ -3,6 +3,7 @@ class App < Sinatra::Base
 
   get '/' do
     if session[:user_id]
+      @current_user = User.get(session[:user_id])
       erb :homepage
     else
       erb :index
@@ -44,13 +45,17 @@ class App < Sinatra::Base
 
   get '/contacts' do
     if session[:user_id]
-      erb :contacts_private
-    else
-      erb :contacts
+      @current_user = User.get(session[:user_id])
     end
+    erb :contacts
   end
 
   get '/settings' do
-    "Hello World"
+    if session[:user_id]
+      @current_user = User.get(session[:user_id])
+      erb :settings
+    else
+      redirect '/'
+    end
   end
 end

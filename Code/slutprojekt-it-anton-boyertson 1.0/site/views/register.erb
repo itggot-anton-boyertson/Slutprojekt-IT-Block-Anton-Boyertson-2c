@@ -1,41 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>ToDo-List</title>
-  <link rel="stylesheet" type="text/css" href="/css/index.css">
-  <link rel="icon" href="/img/topicon.gif">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
-  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
-</head>
-<body>
-<div id="container">
-  <header id="header">
-    <nav>
-      <a href="/">Home</a>
-      <a href="/contacts">Contacts</a>
-      <img  src="/img/logo.png">
-      <div id="login">
-        <form action="/login" method="post">
-          <div class="inputs">
-            <input type="text" name="username" placeholder="Username">
-            <input type="password" name="password" placeholder="Password">
-          </div>
-          <button type="submit">Login</button>
-        </form>
-      </div>
-      <div>
-        <form action="/register" method="get">
-          <button type="submit"  id="register">Register</button>
-        </form>
-      </div>
-    </nav>
-  </header>
-</div>
-<h1>Register</h1>
+<div id="center">
+  <div id="registertext">Register</div>
 <form action="/user/create" method="post" >
-  <input type="text" name="first_name" placeholder="First Name">
+  <div id="registerbars"><input type="text" name="first_name" placeholder="First Name">
   <br>
   <input type="text" name="last_name" placeholder="Last Name">
   <br>
@@ -45,11 +11,10 @@
   <br>
   <input type="text" name="e_mail_address" placeholder="E-Mail Adress">
   <br>
-  <input type="password" name="password" placeholder="Password">
+  <input type="password" name="password" placeholder="Password" id="registerpassword">
   <br>
-
-  <input type="submit" value="Register">
+  <button type="submit" id="registerbutton">Register</button></div>
 </form>
-</body>
-</html>
+</div>
+
 

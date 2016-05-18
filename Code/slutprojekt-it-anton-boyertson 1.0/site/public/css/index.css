@@ -1,7 +1,9 @@
 html body {
     padding: 0;
     margin: 0;
-    background-color: brown;
+    background: url(/img/Background_blur.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 #header {
@@ -9,7 +11,7 @@ html body {
     width: 100%;
     background-color: #cfcdcd;
     height: 90px;
-    border-bottom: solid orange;
+    border-bottom: solid #ffa500;
 }
 
 header nav a {
@@ -186,7 +188,7 @@ button:hover {
 
 #bottombar {
     width: 100%;
-    height: 50px;
+    height: 60px;
     bottom: 0px;
     margin-bottom: 0%;
     margin-right: auto;
@@ -212,13 +214,32 @@ button#backbuttom {
     width: 100%;
 }
 
-.homealt {
+.homealtleft {
     height: 50px;
-    width: calc(100% / 3);
-    background-color: #45a049;
+    width: 32.8%;
+    background-color: #565457;
     float: left;
     text-align: center;
+    border-left: solid gray;
+}
 
+.homealtmid {
+    height: 50px;
+    width: 32.8%;
+    background-color: #565457;
+    float: left;
+    text-align: center;
+    border-left: solid gray;
+    border-right: solid gray;
+}
+
+.homealtright {
+    height: 50px;
+    width: 32.8%;
+    background-color: #565457;
+    float: left;
+    text-align: center;
+    border-right: solid gray;
 }
 
 .homealttext {
@@ -229,6 +250,36 @@ button#backbuttom {
     margin-top: 12px;
 }
 
+.homealtleft:hover,.homealtmid:hover,.homealtright:hover {
+    background-color: #686868;
+}
 
+.homealtlefton {
+    height: 50px;
+    width: 32.8%;
+    background-color: #686868;
+    float: left;
+    text-align: center;
+    border-left: solid gray;
+}
+
+.homealtmidon {
+    height: 50px;
+    width: 32.8%;
+    background-color: #686868;
+    float: left;
+    text-align: center;
+    border-left: solid gray;
+    border-right: solid gray;
+}
+
+.homealtrighton {
+    height: 50px;
+    width: 32.8%;
+    background-color: #686868;
+    float: left;
+    text-align: center;
+    border-right: solid gray;
+}
 
 

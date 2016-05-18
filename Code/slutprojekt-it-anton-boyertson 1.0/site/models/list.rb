@@ -6,6 +6,6 @@ class List
   property :list_description, String, required: true
 
   has n, :user_lists
-  has n, :users, :through => :user_lists
+  #has n, :users, :through => :user_lists
   has n, :items
 end

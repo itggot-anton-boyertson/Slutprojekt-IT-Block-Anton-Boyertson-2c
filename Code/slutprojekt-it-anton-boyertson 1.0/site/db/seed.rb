@@ -4,6 +4,7 @@ class Seeder
     self.user
     self.item
     self.list
+    self.user_list
   end
 
   def self.user
@@ -13,9 +14,13 @@ class Seeder
   end
 
   def self.list
-    List.create(list_name: "köpslista", list_description: "köpslista beskriving")
-    List.create(list_name: "attgöralista", list_description: "attgöralista beskriving")
-    List.create(list_name: "baconattköpalista", list_description: "baconattköpalista beskriving")
+    List.create(list_name: "köpslista", list_description: "köpslista beskriving",)
+    List.create(list_name: "attgöralista", list_description: "attgöralista beskriving",)
+    List.create(list_name: "baconattköpalista", list_description: "baconattköpalista beskriving", )
+  end
+
+  def self.user_list
+    UserList.create(user_id: 2, list_id: 1)
   end
 
   def self.item

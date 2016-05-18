@@ -58,4 +58,23 @@ class App < Sinatra::Base
       redirect '/'
     end
   end
+
+  get '/new_list' do
+    if session[:user_id]
+      @current_user = User.get(session[:user_id])
+      erb :newlist
+    else
+      redirect '/'
+    end
+  end
+
+  get '/contributed_lists' do
+    if session[:user_id]
+      @current_user = User.get(session[:user_id])
+      erb :contributed_lists
+    else
+      redirect '/'
+    end
+  end
+
 end

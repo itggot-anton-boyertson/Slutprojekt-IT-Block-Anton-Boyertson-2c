@@ -4,6 +4,7 @@ class App < Sinatra::Base
   get '/' do
     if session[:user_id]
       @current_user = User.get(session[:user_id])
+      @lists = @current_user.lists
       erb :homepage
     else
       erb :index

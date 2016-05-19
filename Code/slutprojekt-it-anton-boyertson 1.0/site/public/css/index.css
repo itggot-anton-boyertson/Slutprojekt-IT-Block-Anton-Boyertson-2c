@@ -141,7 +141,7 @@ button:hover {
     padding-right: 10px;
     padding-left: 10px;
     width: 65%;
-    height: auto;
+    min-height: 600px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 15px;
@@ -187,14 +187,22 @@ button:hover {
 }
 
 #bottombar {
-    width: 100%;
+    width: 65%;
     height: 60px;
     bottom: 0px;
     margin-bottom: 0%;
     margin-right: auto;
     margin-left: auto;
     color: white;
-    background-color: #9c9a9a
+    background-color: #9c9a9a;
+
+}
+
+#bottombar1 {
+    height: 60px;
+    width: 100%;
+    background-color: #9c9a9a;
+
 }
 
 button#backbuttom {
@@ -282,4 +290,70 @@ button#backbuttom {
     border-right: solid gray;
 }
 
+.socialogo {
+    margin-top: 5px;
+    margin-left: 10px;
+    float: right;
+}
 
+#settingsbar {
+    height: 50px;
+    width: 99.2%;
+    background-color: #565457;
+    float: left;
+    text-align: center;
+    border-left: solid gray;
+    border-right: solid gray;
+}
+
+#settingstext {
+    font-size: 30px;
+    color: orange;
+    opacity: 1;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+#contactsbar {
+    height: 50px;
+    width: 99.2%;
+    background-color: #565457;
+    float: left;
+    text-align: center;
+    border-left: solid gray;
+    border-right: solid gray;
+}
+
+#contactstext {
+    font-size: 30px;
+    color: orange;
+    opacity: 1;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+.topbar {
+    height: 50px;
+}
+
+.listtopbar {
+    height: 50px;
+    margin-top: 5px;
+}
+
+.liststext {
+    font-size: 30px;
+    color: orange;
+    opacity: 1;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+.listsname {
+    height: 50px;
+    width: 99.2%;
+    background-color: #565457;
+    float: left;
+    border-left: solid gray;
+    border-right: solid gray;
+}

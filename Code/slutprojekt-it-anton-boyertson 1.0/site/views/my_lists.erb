@@ -1,0 +1,20 @@
+<div id="centerhomepage">
+  <div id="homeheader">
+    <a href="/"><div class="homealtlefton"><h6 class="homealttext">My Lists</h6></div></a>
+    <a href="/new_list"><div class="homealtmid"><h6 class="homealttext">New List</h6></div></a>
+    <a href="/contributed_lists"><div class="homealtright"><h6 class="homealttext">Contributed Lists</h6></div></a>
+  </div>
+  <div id="listtopbar">
+  <div class="listfacts">
+    <form action="/" method="get">
+      <button type="submit" id="backbuttom">Back</button>
+    </form>
+    <h6><%= @list.list_name %></h6>
+    <h6><%= @list.list_description %></h6>
+
+    <% for items in @item %>
+        <h6><%= items.item_name %></h6>
+    <% end %>
+  </div>
+  </div>
+</div>

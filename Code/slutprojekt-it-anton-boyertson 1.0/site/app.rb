@@ -5,6 +5,7 @@ class App < Sinatra::Base
     if session[:user_id]
       @current_user = User.get(session[:user_id])
       @lists = @current_user.lists
+      @item = @lists.items
       erb :homepage
     else
       erb :index
@@ -76,6 +77,27 @@ class App < Sinatra::Base
     else
       redirect '/'
     end
+  end
+
+  get '/my_lists/:lists_id' do |list_id|
+    if session[:user_id]
+      @current_user = User.get(session[:user_id])
+      @list = List.get(list_id)
+      @item = @list.items
+
+      erb :my_lists
+    else
+      redirect '/'
+    end
+  end
+
+  post '/remove/:lists_id' do |lists_id|
+    current_user = User.get(session[:user_id])
+    user_list = UserList.first(:list_id => lists_id)
+    user_list.list.items.destroy
+    user_list.list.destroy
+    user_list.destroy
+    redirect '/'
   end
 
 end

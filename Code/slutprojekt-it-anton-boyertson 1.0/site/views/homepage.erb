@@ -1,12 +1,28 @@
 <div id="centerhomepage">
   <div id="homeheader">
-    <a href="/"><div class="homealtlefton"><h6 class="homealttext">My Lists</h6></div></a>
-    <a href="/new_list"><div class="homealtmid"><h6 class="homealttext">New List</h6></div></a>
-    <a href="/contributed_lists"><div class="homealtright"><h6 class="homealttext">Contributed Lists</h6></div></a>
+    <a href="/">
+      <div class="homealtlefton"><h6 class="homealttext">My Lists</h6></div>
+    </a>
+    <a href="/new_list">
+      <div class="homealtmid"><h6 class="homealttext">New List</h6></div>
+    </a>
+    <a href="/contributed_lists">
+      <div class="homealtright"><h6 class="homealttext">Contributed Lists</h6></div>
+    </a>
   </div>
   <div>
     <% for lists in @lists %>
-    <div class="listtopbar"><div class="listsname"><h6 class="liststext"><%= lists.list_name %></h6></div></div>
-   <% end %>
+        <div class="listtopbar">
+          <a href="/my_lists/<%= lists.id %>" class="bacon"><div class="liststar"><h6 class="textstar">*</h6></div>
+          <div class="listsname"><h6 class="liststext"><%= lists.list_name %></h6></div>
+          <div class="listnumber"><h6 class="textnumber"><%= lists.items.length %></h6></div>
+          <div class="listitem"><h6 class="itemstext">Items</h6></div></a>
+          <div class="listremove">
+            <form method="post" action="/remove/<%= lists.id %>">
+              <button type="submit" id="remove">Remove</button>
+            </form>
+          </div>
+        </div>
+    <% end %>
   </div>
 </div>

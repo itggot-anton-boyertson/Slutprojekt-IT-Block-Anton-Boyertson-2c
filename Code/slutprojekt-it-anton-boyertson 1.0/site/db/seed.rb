@@ -23,6 +23,7 @@ class Seeder
     UserList.create(user_id: 2, list_id: 1)
     UserList.create(user_id: 2, list_id: 3)
     UserList.create(user_id: 2, list_id: 2)
+    UserList.create(user_id: 2, list_id: 4)
   end
 
   def self.item

@@ -479,17 +479,18 @@ button#backbuttomlist:hover {
     border-left: solid gray;
 }
 
-.righttab {
+.lefttab {
     width: calc(99.2% / 2);
     float: left;
+    min-width: 250px;
 }
 
-.lefttab {
+.righttab {
     width: calc(99.2% / 2);
     height: 100px;
     background-color: hotpink;
     float: left;
-
+    min-width: 250px;
 }
 
 #listname {
@@ -538,7 +539,7 @@ button#backbuttomlist:hover {
 button#additembutton {
     height: 40px;
     width: 90px;
-    background-color: #b7c840;
+    background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
     margin: 10px 0;
@@ -550,7 +551,7 @@ button#additembutton {
 }
 
 button#additembutton:hover {
-    background-color: #99ab38;
+    background-color: #45a049;
 }
 
 .itembar {
@@ -563,6 +564,7 @@ button#additembutton:hover {
     background-color: gray;
     width: 100%;
     float: left;
+    border-bottom: solid orange;
 }
 
 .itemlisttext {
@@ -592,4 +594,22 @@ button#doneitembutton {
 
 button#doneitembutton:hover {
     background-color: #c82b1c;
+}
+
+.border_line_50_orange {
+    width: auto;
+    height: 3px;
+    background-color: orange;
+    border-right: solid orange;
+    border-left: solid orange;
+}
+
+.sharewith {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 25px;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 10px;
 }

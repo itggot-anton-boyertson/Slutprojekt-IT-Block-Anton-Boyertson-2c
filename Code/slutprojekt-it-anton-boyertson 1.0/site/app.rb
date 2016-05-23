@@ -101,10 +101,15 @@ class App < Sinatra::Base
   end
 
   post '/add_item' do
-    "Hello World"
+    item = Item.create(item_name: params['first_name'])
+    if item.valid?
+      redirect '/my_lists/:lists_id'
+    else
+      redirect '/my_lists/:lists_id'
+    end
   end
 
-  post '/done_item/:item_id' do
+  post '/done_items/:item_id' do
     current_user = User.get(session[:user_id])
     current_item = Item.first(:item_id => items_id)
     current_item.destroy

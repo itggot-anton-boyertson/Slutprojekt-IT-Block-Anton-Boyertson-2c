@@ -13,7 +13,7 @@
   <div class="border_line"></div>
   <div id="listtopbar">
     <div class="listfacts">
-      <div class="righttab">
+      <div class="lefttab">
       <form action="/" method="get">
         <button type="submit" id="backbuttomlist">Back</button>
       </form>
@@ -27,17 +27,18 @@
         </form></div>
       <% for items in @item %>
             <div class="itembar">
+              <div class="border_line_50_orange"></div>
               <div class="itemlist">
                 <h6 class="itemlisttext"><%= items.item_name %></h6>
-                <form action="/done_item/:item_id" method="post">
+                <form action="/done_items/:item_id" method="post">
                   <button type="submit" id="doneitembutton">Done</button>
                 </form>
               </div>
             </div>
       <% end %>
       </div>
-      <div class="lefttab">
-
+      <div class="righttab">
+        <h6 class="sharewith">Share with</h6>
       </div>
     </div>
   </div>

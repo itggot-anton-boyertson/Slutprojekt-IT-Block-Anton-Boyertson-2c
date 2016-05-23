@@ -100,4 +100,15 @@ class App < Sinatra::Base
     redirect '/'
   end
 
+  post '/add_item' do
+    "Hello World"
+  end
+
+  post '/done_item/:item_id' do
+    current_user = User.get(session[:user_id])
+    current_item = Item.first(:item_id => items_id)
+    current_item.destroy
+    redirect '/'
+  end
+
 end

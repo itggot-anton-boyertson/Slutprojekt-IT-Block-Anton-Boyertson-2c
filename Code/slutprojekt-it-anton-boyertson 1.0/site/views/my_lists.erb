@@ -1,20 +1,44 @@
 <div id="centerhomepage">
   <div id="homeheader">
-    <a href="/"><div class="homealtlefton"><h6 class="homealttext">My Lists</h6></div></a>
-    <a href="/new_list"><div class="homealtmid"><h6 class="homealttext">New List</h6></div></a>
-    <a href="/contributed_lists"><div class="homealtright"><h6 class="homealttext">Contributed Lists</h6></div></a>
+    <a href="/">
+      <div class="homealtlefton"><h6 class="homealttext">My Lists</h6></div>
+    </a>
+    <a href="/new_list">
+      <div class="homealtmid"><h6 class="homealttext">New List</h6></div>
+    </a>
+    <a href="/contributed_lists">
+      <div class="homealtright"><h6 class="homealttext">Contributed Lists</h6></div>
+    </a>
   </div>
+  <div class="border_line"></div>
   <div id="listtopbar">
-  <div class="listfacts">
-    <form action="/" method="get">
-      <button type="submit" id="backbuttom">Back</button>
-    </form>
-    <h6><%= @list.list_name %></h6>
-    <h6><%= @list.list_description %></h6>
+    <div class="listfacts">
+      <div class="righttab">
+      <form action="/" method="get">
+        <button type="submit" id="backbuttomlist">Back</button>
+      </form>
+      <h6 id="listname"><%= @list.list_name %></h6>
+      <h6 class="description"><%= @list.list_description %></h6>
+        <div class="border_line_50"></div>
+        <div id="additem">
+        <form action="/add_item" method="post">
+            <input type="text" name="username" placeholder="Item Name" id="itemname">
+            <button type="submit" id="additembutton">Add</button>
+        </form></div>
+      <% for items in @item %>
+            <div class="itembar">
+              <div class="itemlist">
+                <h6 class="itemlisttext"><%= items.item_name %></h6>
+                <form action="/done_item/:item_id" method="post">
+                  <button type="submit" id="doneitembutton">Done</button>
+                </form>
+              </div>
+            </div>
+      <% end %>
+      </div>
+      <div class="lefttab">
 
-    <% for items in @item %>
-        <h6><%= items.item_name %></h6>
-    <% end %>
-  </div>
+      </div>
+    </div>
   </div>
 </div>

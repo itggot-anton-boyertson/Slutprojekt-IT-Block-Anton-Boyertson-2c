@@ -39,11 +39,11 @@ header nav img {
 }
 
 header nav div#login {
-  margin-top: 15px;
-  margin-left: 8.5%;
-  float: left;
-  width: 25.64%;
-  #width: 350px;
+    margin-top: 15px;
+    margin-left: 8.5%;
+    float: left;
+    width: 25.64%;
+    #width: 350px;
 }
 
 input[type="text"], select {
@@ -98,7 +98,7 @@ button {
     margin-right: 10px;
 }
 
-#register{
+#register {
     margin-top: 22px;
 }
 
@@ -132,7 +132,7 @@ button:hover {
     margin-bottom: 150px;
     margin-top: 30px;
     color: white;
-    background-color: rgba(64,64,64,0.8);
+    background-color: rgba(64, 64, 64, 0.8);
 }
 
 #centerhomepage {
@@ -148,7 +148,7 @@ button:hover {
     margin-bottom: 15px;
     margin-top: 30px;
     color: white;
-    background-color: rgba(64,64,64,0.8);
+    background-color: rgba(64, 64, 64, 0.8);
 }
 
 #center {
@@ -163,16 +163,16 @@ button:hover {
     margin-bottom: 15px;
     margin-top: 30px;
     color: white;
-    background-color: rgba(64,64,64,0.8);
+    background-color: rgba(64, 64, 64, 0.8);
 }
 
-#registertext{
+#registertext {
     margin-top: 30px;
     margin-left: 20%;
     font-size: 60px;
 }
 
-#registerbars{
+#registerbars {
     margin-top: 30px;
     width: 35%;
     margin-left: auto;
@@ -218,6 +218,10 @@ button#backbuttom {
     float: left;
 }
 
+button#backbuttom:hover {
+    background-color: #99ab38;
+}
+
 #homeheader {
     height: 50px;
     width: 100%;
@@ -259,7 +263,7 @@ button#backbuttom {
     margin-top: 12px;
 }
 
-.homealtleft:hover,.homealtmid:hover,.homealtright:hover, .liststar:hover,.listsname:hover {
+.homealtleft:hover, .homealtmid:hover, .homealtright:hover, .liststar:hover, .listsname:hover {
     background-color: #686868;
 }
 
@@ -447,4 +451,145 @@ button#backbuttom {
     text-align: center;
     border-left: solid gray;
     border-right: solid gray;
+}
+
+button#backbuttomlist {
+    width: 90px;
+    background-color: #b7c840;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+}
+
+button#backbuttomlist:hover {
+    background-color: #99ab38;
+}
+
+.border_line {
+    margin-top: 5px;
+    width: 99.2%;
+    height: 3px;
+    background-color: gray;
+    border-right: solid gray;
+    border-left: solid gray;
+}
+
+.righttab {
+    width: calc(99.2% / 2);
+    float: left;
+}
+
+.lefttab {
+    width: calc(99.2% / 2);
+    height: 100px;
+    background-color: hotpink;
+    float: left;
+
+}
+
+#listname {
+    margin-top: 15px;
+    font-size: 35px;
+    color: orange;
+    font-variant: small-caps;
+}
+
+.description {
+    background-color: gray;
+    margin-left: 10px;
+    margin-right: 10px;
+    min-height: 100px;
+    text-align: left;
+    padding: 5px;
+}
+
+.border_line_50 {
+    margin-top: -5px;
+    width: auto;
+    height: 3px;
+    background-color: gray;
+    border-right: solid gray;
+    border-left: solid gray;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#additem {
+    height: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: grey;
+    margin-top: 10px;
+}
+
+#itemname {
+    margin-top: 10px;
+    width: calc(100% - 120px);
+    height: 40px;
+    float: left;
+    margin-left: 10px;
+}
+
+button#additembutton {
+    height: 40px;
+    width: 90px;
+    background-color: #b7c840;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px 0;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+}
+
+button#additembutton:hover {
+    background-color: #99ab38;
+}
+
+.itembar {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.itemlist {
+    background-color: gray;
+    width: 100%;
+    float: left;
+}
+
+.itemlisttext {
+    text-align: left;
+    font-size: 20px;
+    color: orange;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    float: left;
+}
+
+button#doneitembutton {
+    height: 40px;
+    width: 90px;
+    background-color: #b7c840;
+    color: white;
+    padding: 13px 20px;
+    margin: 10px 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+button#doneitembutton:hover {
+    background-color: #c82b1c;
 }

@@ -22,7 +22,8 @@
         <div class="border_line_50"></div>
         <div id="additem">
         <form action="/add_item" method="post">
-            <input type="text" name="username" placeholder="Item Name" id="itemname">
+            <input type="hidden" name="list_id" value="<%= @list.id %>">
+            <input type="text" name="item_name" placeholder="Item Name" id="itemname">
             <button type="submit" id="additembutton">Add</button>
         </form></div>
       <% for items in @item %>
@@ -30,7 +31,7 @@
               <div class="border_line_50_orange"></div>
               <div class="itemlist">
                 <h6 class="itemlisttext"><%= items.item_name %></h6>
-                <form action="/done_items/:item_id" method="post">
+                <form action="/done_items/<%= items.id %>" method="post">
                   <button type="submit" id="doneitembutton">Done</button>
                 </form>
               </div>

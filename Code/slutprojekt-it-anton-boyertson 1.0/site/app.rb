@@ -102,19 +102,22 @@ class App < Sinatra::Base
   end
 
   post '/add_item' do
-    item = Item.create(item_name: params['first_name'])
-    if item.valid?
-      redirect '/my_lists/:lists_id'
-    else
-      redirect '/my_lists/:lists_id'
-    end
+    item = Item.create(item_name: params['item_name'],
+                       list_id: params['list_id'])
+
+    redirect "/my_lists/#{params['list_id']}"
+    # if item.valid?
+    #   redirect "/my_lists/#{params['list_id']}"
+    # else
+    #   redirect "/my_lists/#{params['list_id']}"
+    # end
   end
 
-  post '/done_items/:item_id' do
+  post '/done_items/:item_id' do |item_id|
     current_user = User.get(session[:user_id])
-    current_item = Item.first(:item_id => items_id)
+    current_item = Item.get(item_id)
     current_item.destroy
-    redirect '/'
+    redirect back
   end
 
   post '/add_user' do

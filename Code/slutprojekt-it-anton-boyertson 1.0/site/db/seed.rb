@@ -4,7 +4,6 @@ class Seeder
     self.user
     self.item
     self.list
-    self.user_list
   end
 
   def self.user
@@ -17,13 +16,10 @@ class Seeder
     List.create(list_name: "köpslista", list_description: "köpslista beskriving",)
     List.create(list_name: "attgöralista", list_description: "attgöralista beskriving",)
     List.create(list_name: "baconattköpalista", list_description: "baconattköpalista beskriving", )
-  end
 
-  def self.user_list
     UserList.create(user_id: 2, list_id: 1)
     UserList.create(user_id: 2, list_id: 3)
     UserList.create(user_id: 2, list_id: 2)
-    UserList.create(user_id: 2, list_id: 4)
   end
 
   def self.item

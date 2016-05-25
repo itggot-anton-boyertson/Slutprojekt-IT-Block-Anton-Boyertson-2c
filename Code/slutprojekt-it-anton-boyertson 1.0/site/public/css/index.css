@@ -681,3 +681,7 @@ textarea, select {
     font-size: 35px;
     color: orange;
 }
+
+input[type="hidden"] {
+    display: none;
+}

@@ -84,6 +84,7 @@ class App < Sinatra::Base
       @current_user = User.get(session[:user_id])
       @list = List.get(list_id)
       @item = @list.items
+      @users = User.get(list_id)
 
       erb :my_lists
     else
@@ -114,6 +115,14 @@ class App < Sinatra::Base
     current_item = Item.first(:item_id => items_id)
     current_item.destroy
     redirect '/'
+  end
+
+  post '/add_user' do
+    "Hello World"
+  end
+
+  post '/list/create' do
+    "Hello World"
   end
 
 end

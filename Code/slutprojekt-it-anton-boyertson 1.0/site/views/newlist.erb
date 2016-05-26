@@ -18,11 +18,13 @@
           <button type="submit" id="backbuttomlist">Back</button>
         </form>
         <h6 id="newlist">New List</h6>
+        <div id="newlistmain">
         <form action="/list/create" method="post">
-          <input type="text" name="username" placeholder="List Name" id="itemname">
-          <textarea name="Text1" cols="40" rows="5" placeholder="List Description"></textarea>
-          <button type="submit" id="additembutton">Add</button>
-        </form>
+          <input type="hidden" name="user_id" value="<%= @user.id %>">
+          <input type="text" name="list_name" placeholder="List Name" id="newlistname">
+          <textarea name="Text1" cols="40" rows="5" name="list_description" placeholder="List Description" id="newlistdescription"></textarea>
+          <button type="submit" id="addlistbutton">Add</button>
+        </form></div>
       </div>
     </div>
   </div>

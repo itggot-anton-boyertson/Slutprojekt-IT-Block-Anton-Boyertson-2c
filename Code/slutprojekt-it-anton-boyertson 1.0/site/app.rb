@@ -125,7 +125,12 @@ class App < Sinatra::Base
   end
 
   post '/list/create' do
-    "Hello World"
+    list = list.create(list_name: params['list_name'],
+                       list_id: params['list_id'],
+                       user_id: params['user_id'])
+
+  redirect '/'
+
   end
 
 end

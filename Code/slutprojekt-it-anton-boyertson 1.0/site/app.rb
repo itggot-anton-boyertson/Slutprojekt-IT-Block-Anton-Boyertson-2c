@@ -1,9 +1,14 @@
 class App < Sinatra::Base
   enable :sessions
 
-  get '/' do
+  before do
     if session[:user_id]
       @current_user = User.get(session[:user_id])
+    end
+  end
+
+  get '/' do
+    if @current_user
       @lists = @current_user.lists
       @item = @lists.items
       erb :homepage
@@ -46,15 +51,11 @@ class App < Sinatra::Base
   end
 
   get '/contacts' do
-    if session[:user_id]
-      @current_user = User.get(session[:user_id])
-    end
     erb :contacts
   end
 
   get '/settings' do
-    if session[:user_id]
-      @current_user = User.get(session[:user_id])
+    if @current_user
       erb :settings
     else
       redirect '/'
@@ -62,8 +63,7 @@ class App < Sinatra::Base
   end
 
   get '/new_list' do
-    if session[:user_id]
-      @current_user = User.get(session[:user_id])
+    if @current_user
       erb :newlist
     else
       redirect '/'
@@ -71,8 +71,7 @@ class App < Sinatra::Base
   end
 
   get '/contributed_lists' do
-    if session[:user_id]
-      @current_user = User.get(session[:user_id])
+    if @current_user
       erb :contributed_lists
     else
       redirect '/'
@@ -80,8 +79,7 @@ class App < Sinatra::Base
   end
 
   get '/my_lists/:lists_id' do |list_id|
-    if session[:user_id]
-      @current_user = User.get(session[:user_id])
+    if @current_user
       @list = List.get(list_id)
       @item = @list.items
       @users = User.get(list_id)
@@ -93,7 +91,6 @@ class App < Sinatra::Base
   end
 
   post '/remove/:lists_id' do |lists_id|
-    current_user = User.get(session[:user_id])
     user_list = UserList.first(:list_id => lists_id)
     user_list.list.items.destroy
     user_list.list.destroy
@@ -125,12 +122,12 @@ class App < Sinatra::Base
   end
 
   post '/list/create' do
-    list = list.create(list_name: params['list_name'],
-                       list_id: params['list_id'],
-                       user_id: params['user_id'])
-
-  redirect '/'
-
+    if @current_user
+      list = List.create(list_name: params[:list_name], list_description: params[:list_description])
+      user_list = UserList.create(user: @current_user, list: list)
+      redirect "/my_lists/#{list.id}"
+    end
+    redirect '/'
   end
 
 end

@@ -616,6 +616,7 @@ button#doneitembutton:hover {
 }
 
 #adduser {
+    width: calc(100% - 15px);
     height: 60px;
     margin-left: 10px;
     margin-right: 10px;

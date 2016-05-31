@@ -41,12 +41,22 @@
       <div class="righttab">
         <h6 class="sharewith">Share with</h6>
         <div id=adduser>
-        <form action="/add_user" method="post">
+        <form action="/add_user/<%= @list.id %>" method="post">
           <input type="text" name="username" placeholder="User Name" id="username">
           <button type="submit" id="adduserbutton">Add</button>
         </form>
-
         </div>
+        <% for user in @users %>
+            <div class="userbar">
+              <div class="border_line_50_white"></div>
+              <div class="userlist">
+                <h6 class="itemlisttext"><%= user.username %></h6>
+                <form action="/" method="post">
+                  <button type="submit" id="removeuserbutton">Remove</button>
+                </form>
+              </div>
+            </div>
+        <% end %>
       </div>
       </div>
     </div>

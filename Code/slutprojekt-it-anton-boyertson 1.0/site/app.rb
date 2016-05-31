@@ -82,7 +82,8 @@ class App < Sinatra::Base
     if @current_user
       @list = List.get(list_id)
       @item = @list.items
-      @users = User.get(list_id)
+      @users = UserList.all(list: @list).users
+
 
       erb :my_lists
     else
@@ -117,8 +118,12 @@ class App < Sinatra::Base
     redirect back
   end
 
-  post '/add_user' do
-    "Hello World"
+  post '/add_user/:list_id' do |list_id|
+    add_user = User.first(username: params['username'])
+    user_list = UserList.create(list_id: list_id,
+                                user_id: add_user.id,)
+
+    redirect "/my_lists/#{params['list_id']}"
   end
 
   post '/list/create' do

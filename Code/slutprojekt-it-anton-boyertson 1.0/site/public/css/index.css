@@ -433,6 +433,7 @@ button#backbuttom:hover {
     text-align: center;
     border-left: solid gray;
     border-right: solid gray;
+    padding-bottom: 10px;
 }
 
 button#backbuttomlist {
@@ -776,12 +777,12 @@ button#removeuserbutton:hover {
     }
 
     header nav a {
-        font-size: 25px;
+        font-size: 30px;
         margin-left: 6%;
     }
 
     #settings {
-        font-size: 25px;
+        font-size: 30px;
         margin-left: 6%;
     }
 
@@ -795,11 +796,13 @@ button#removeuserbutton:hover {
 
     header nav div#login {
         margin-left: 2%;
+        width: 305px;
     }
 
     .inputs {
         float: left;
         width: 200px;
+        margin-right: -25px;
     }
 
     #homeheader {
@@ -842,6 +845,34 @@ button#removeuserbutton:hover {
     #remove {
         margin-left: 15px;
     }
+
+    #header {
+        padding-left: 8%;
+    }
+}
+
+@media (max-width: 1050px) {
+    #header {
+        padding-left: 2%;
+    }
+}
+
+@media (max-width: 900px) {
+    header nav a {
+        margin-left: 5%;
+    }
+
+    #settings {
+        margin-left: 5%;
+    }
+
+    #header {
+       padding-left: 1px;
+    }
+
+    #register {
+        float: right;
+    }
 }
 
 @media (max-width: 800px) {
@@ -856,6 +887,14 @@ button#removeuserbutton:hover {
 
     input[type="password"], select {
         width: 150px;
+    }
+
+    header nav a {
+        font-size: 25px;
+    }
+
+    #settings {
+        font-size: 25px;
     }
 }
 
@@ -900,4 +939,8 @@ button#removeuserbutton:hover {
     #logout {
         margin-left: 6%;
     }
+}
+
+@media (max-width: 600px) {
+
 }

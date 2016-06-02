@@ -1,7 +1,10 @@
-<div id="center">
+<div id="settingscenter">
   <div class="topbar">
     <div id="settingsbar"><h6 id="settingstext">Settings</h6></div>
   </div>
+  <div class="border_line"></div>
+  <div class="settingstextitembar">
+    <div class="settingstextitem">
   <h6>First name:</h6>
   <%= @current_user.first_name %>
   <br>
@@ -14,9 +17,8 @@
   <h6>Mobil:</h6>
   <%= @current_user.mobil %>
   <br>
-  <h6>Password:</h6>
-  <%= @current_user.password %>
-  <br>
   <h6>E-mail Address:</h6>
   <%= @current_user.e_mail_address %>
+    </div>
+  </div>
 </div>

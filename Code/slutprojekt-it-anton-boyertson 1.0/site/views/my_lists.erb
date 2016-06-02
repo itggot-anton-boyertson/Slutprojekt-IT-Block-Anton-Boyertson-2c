@@ -48,7 +48,7 @@
               <div class="border_line_50_white"></div>
               <div class="userlist">
                 <h6 class="itemlisttext"><%= user.username %></h6>
-                <form action="/" method="post">
+                <form action="/remove_user/<%= @user_list.id %>" method="post">
                   <button type="submit" id="removeuserbutton">Remove</button>
                 </form>
               </div>

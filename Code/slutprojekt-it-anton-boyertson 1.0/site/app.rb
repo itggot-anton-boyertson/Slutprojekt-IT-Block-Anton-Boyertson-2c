@@ -83,7 +83,7 @@ class App < Sinatra::Base
       @list = List.get(list_id)
       @item = @list.items
       @users = UserList.all(list: @list).users
-
+      @user_list = UserList.all(list: @list)
 
       erb :my_lists
     else
@@ -133,6 +133,12 @@ class App < Sinatra::Base
       redirect "/my_lists/#{list.id}"
     end
     redirect '/'
+  end
+
+  post '/remove_user/:user_list_id' do |user_list_id|
+    user_list = UserList.first(:user_list_id => user_list_id)
+    user_list.destroy
+    redirect "/my_lists/#{list.id}"
   end
 
 end

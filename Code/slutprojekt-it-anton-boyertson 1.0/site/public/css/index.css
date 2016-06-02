@@ -888,6 +888,11 @@ button#removeuserbutton:hover {
     height: 450px;
 }
 
+.contactslorem {
+    text-decoration: none;
+    color: white;
+}
+
 @media (max-width: 1280px) {
     .textstar {
         font-size: 0px;
@@ -921,6 +926,10 @@ button#removeuserbutton:hover {
     }
 
     input[type="password"], select {
+        width: 175px;
+    }
+
+    input[type="password"]#registerpassword, select {
         width: 175px;
     }
 
@@ -1023,11 +1032,19 @@ button#removeuserbutton:hover {
     #homecenter {
         min-height: 1320px;
     }
+
+    .topbaritem {
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 810px) {
     #imglogo {
         margin-left: 5px;
+    }
+
+    .topbaritem {
+        margin-bottom: 30px;
     }
 }
 
@@ -1051,6 +1068,10 @@ button#removeuserbutton:hover {
         width: 150px;
     }
 
+    input[type="password"]#registerpassword, select {
+        width: 155px;
+    }
+
     header nav a {
         font-size: 25px;
     }
@@ -1070,6 +1091,35 @@ button#removeuserbutton:hover {
 
     #homecenter {
         min-height: 1160px;
+    }
+
+    .topbaritem {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 792px) {
+    .lefttab {
+        width: calc(99.2% / 2);
+        min-width: 495px;
+    }
+
+    .righttab {
+        width: calc(99.2% / 2);
+        min-width: 490px;
+    }
+
+    #centerhomepage {
+        min-height: 750px;
+
+    }
+
+    .newlistfacts {
+        min-height: 640px;
+    }
+
+    .topbaritem {
+        margin-bottom: 30px;
     }
 }
 
@@ -1123,6 +1173,10 @@ button#removeuserbutton:hover {
         width: 100px;
     }
 
+    input[type="password"]#registerpassword, select {
+        width: 100px;
+    }
+
     .inputs {
         width: 130px;
     }
@@ -1143,6 +1197,10 @@ button#removeuserbutton:hover {
 
     .contenttext {
         font-size: 13px;
+    }
+
+    .topbaritem {
+        margin-bottom: 30px;
     }
 }
 

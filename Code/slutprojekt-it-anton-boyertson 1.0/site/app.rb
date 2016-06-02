@@ -83,7 +83,7 @@ class App < Sinatra::Base
       @list = List.get(list_id)
       @item = @list.items
       @users = UserList.all(list: @list).users
-      @user_list = UserList.all(list: @list)
+
 
       erb :my_lists
     else

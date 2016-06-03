@@ -83,7 +83,8 @@ class App < Sinatra::Base
       @list = List.get(list_id)
       @item = @list.items
       @users = UserList.all(list: @list).users
-
+      @user_list = UserList.first(list: @list,
+                                  user: @selected_user)
 
       erb :my_lists
     else
@@ -120,10 +121,14 @@ class App < Sinatra::Base
 
   post '/add_user/:list_id' do |list_id|
     add_user = User.first(username: params['username'])
-    user_list = UserList.create(list_id: list_id,
-                                user_id: add_user.id,)
+    if add_user != nil
+      user_list = UserList.create(list_id: list_id,
+                                  user_id: add_user.id,)
 
-    redirect "/my_lists/#{params['list_id']}"
+      redirect "/my_lists/#{params['list_id']}"
+    else
+      redirect "/my_lists/#{params['list_id']}"
+    end
   end
 
   post '/list/create' do
@@ -135,10 +140,10 @@ class App < Sinatra::Base
     redirect '/'
   end
 
-  post '/remove_user/:user_list_id' do |user_list_id|
-    user_list = UserList.first(:user_list_id => user_list_id)
+  post '/remove_user/:list_id/:user_id' do |list_id, user_id|
+    user_list = UserList.first(:list_id => list_id, :user_id => user_id)
     user_list.destroy
-    redirect "/my_lists/#{list.id}"
+    redirect "/my_lists/#{list_id}"
   end
 
 end

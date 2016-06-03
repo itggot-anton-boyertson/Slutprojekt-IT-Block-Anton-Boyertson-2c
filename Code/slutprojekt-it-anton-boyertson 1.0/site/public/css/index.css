@@ -1002,7 +1002,7 @@ button#removeuserbutton:hover {
     #register {
         position: absolute;
         top: 1px;
-        right: 5px;
+        right: 25px;
     }
 
     #homecenter {
@@ -1225,4 +1225,98 @@ button#removeuserbutton:hover {
         top: 1px;
         right: 50px;
     }
+}
+
+
+@media (max-width: 414px) {
+    #header {
+        min-width: 414px;
+        height: auto;
+    }
+
+    button {
+        width: 70px;
+        padding: 5px;
+    }
+
+    #register {
+        width: 80px;
+        padding: 5px;
+        margin-top: 70px;
+    }
+
+    header nav a {
+        text-align: center;
+        margin-left: 75px;
+    }
+
+    
+}
+
+@media (max-width: 376px) {
+    #header {
+        max-width: 375px;
+        height: auto;
+    }
+
+    button {
+        width: 70px;
+        padding: 5px;
+    }
+
+    #register {
+        width: 80px;
+        padding: 5px;
+        margin-top: 71px;
+    }
+
+    .inputs {
+        padding-left: 60px;
+        margin-bottom: 10px;
+    }
+
+    #logout {
+        margin-top: 30px;
+    }
+
+    .listitem {
+        width: 0px;
+        height: 0px;
+    }
+
+    .itemstext {
+        font-size: 0px;
+    }
+
+    .listnumber {
+        width: 0px;
+        height: 0px;
+    }
+
+    .textnumber {
+        font-size: 0px;
+    }
+
+    #centerhomepage {
+        width: calc(100% - 505px);
+
+    }
+
+    #grillkorv {
+        max-width: 375px;
+    }
+
+    #homeheader {
+        max-width: 375px;
+        margin-right: 0px;
+    }
+
+    #settings {
+        font-size: 20px;
+    }
+
+    header nav a {
+        margin-left: 55px;
+    }
+
 }
